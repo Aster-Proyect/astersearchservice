@@ -1,6 +1,7 @@
 #include "../include/search_engine.h"
 #include "../include/prefix_tree.h"
 #include "../include/inverted_index.h"
+#include "../include/aster_branding.h"
 #include <chrono>
 #include <fstream>
 #include <iostream>
@@ -28,12 +29,12 @@ int main(int argc, char* argv[]) {
     auto now = std::time(nullptr);
     char timestamp[64];
     std::strftime(timestamp, sizeof(timestamp), "%Y%m%d_%H%M%S", std::localtime(&now));
-    std::string filename = "benchmark_results/benchmark_" + std::string(timestamp) + ".txt";
+    std::string filename = "benchmark_results/aster_search_benchmark_" + std::string(timestamp) + ".txt";
 
     mkdir("benchmark_results", 0755);
     std::ofstream out(filename);
 
-    out << "=== INDEXOR BENCHMARK ===\n";
+    out << "=== " << AsterSearch::DISPLAY_NAME << " v" << AsterSearch::VERSION << " BENCHMARK ===\n";
     out << "Directory: " << dir << "\n";
     out << "Timestamp: " << std::ctime(&now) << "\n";
 
