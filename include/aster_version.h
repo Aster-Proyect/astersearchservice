@@ -1,0 +1,9 @@
+#pragma once
+
+#define ASTER_SEARCH_VERSION_MAJOR 1
+#define ASTER_SEARCH_VERSION_MINOR 0
+#define ASTER_SEARCH_VERSION_PATCH 0
+
+#define ASTER_SEARCH_VERSION "1.0.0"
+#define ASTER_SEARCH_NAME "AsterSearchService"
+#define ASTER_SEARCH_DISPLAY_NAME "Aster Search"
